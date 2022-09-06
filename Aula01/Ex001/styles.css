@@ -19,26 +19,22 @@ body{
   background-color: var(--azulescuro);
 }
 
-h1{
-  color: var(--verdeclaro);
-}
-p{
-  color: var(--verdeclaro);
-}
+
 input{
   width: 10em;
   height: 3em;
   border-radius: 2em;
   box-shadow: 0px 0px 0px var(--azulclaro);
-  transition: 1s;
+  transition: 0.5s;
   text-align: center;
   font-size: 1em;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 input:hover{
   cursor: pointer;
-  transition: 1s;
+  transition: 0.5s;
   box-shadow: 2px 1px 15px var(--azulclaro);
   border: 3px solid var(--azulclaro);
 }
@@ -53,16 +49,95 @@ input[type='number']::-webkit-outer-spin-button {
 #container-principal{
   text-align: center;
   padding: 2em;
-  
+
 }
+  
+#container-principal > h1{
+  color: var(--verdeclaro);
+  font-size: 3em;
+}
+  
+#container-principal > p{
+  color: var(--verdeclaro);
+}
+
+
 #container-inputs{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2%;
+  gap: 2%;;
   
+  
+}
+
+#container-inputs > p{
+  color: var(--azulclaro);
+  font-size: 1.3em ;
+  font-weight: bold;
+
+}
+
+#btnCalc{
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btnCalcMedia{
+  border: 3px solid var(--azul);
+  width: 15em;
+  height: 4em;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 1em;
+  background-color: var(--azulclaro);
+  color: var(--verde);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#btnCalcMedia:hover{
+  transition: 0.5s;
+  scale: 110%;
+}
+
+#card-resultado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 
 
+#Resultado{
+  margin: 1.2em;
+  width: 40em;
+  height: 15em;
+  border-radius: 2em;
+  background-color: var(--azulclaro);
+  border: 3px solid var(--azul);
+  text-align: center;
+  transition: 0.5s;
+}
+#Resultado:hover{
+  transition: 0.5s;
+  box-shadow: 2px 1px 15px var(--azulclaro);
+  border: 3px solid var(--azulclaro);
+}
+#Resultado > h1{
+  color: var(--verdeclaro);
+  padding: 0.6em 0.6em 0.1em 0.6em;
+}
+#Resultado > h2{
+font-size: 3em;
+padding-bottom: 0.2em;
+}
+
+#Resultado > h2, h3{
+  color: var(--verdeclaro);
+}
