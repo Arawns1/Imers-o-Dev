@@ -7,24 +7,52 @@
     <link rel="stylesheet" href="style.css" />
     <script src="src.js"></script>
     <title>Conversor de Moedas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <fieldset>
-      <legend>Conversor de moedas</legend>
-      <h1>Digite um valor</h1>
-      <input type="number" id="valor" />
-      <button type="submit" onclick="Converter()">Converter!</button>
-    </fieldset>
+    <h1>Conversor de moedas</h1>
+    <div class="container-inicial centralizar">
+      <div id="borda-inicial">
+        <h2>Digite um valor</h2>
+        <input
+          type="number"
+          id="valor"
+          oninput="Converter()"
+          onchange="Converter()"
+          min="1"
+          placeholder="1.00"
+        />
+      </div>
+    </div>
+
     <div class="container">
       <div class="card">
-        <h1>Dolar em Real</h1>
-        <p><span id="Valor-Real"></span></p>
+        <div class="texto">
+          <h1>Dolar em Real</h1>
+        </div>
+        <div class="resultado">
+          <p id="Valor-Real"></p>
+        </div>
       </div>
 
       <div class="card">
-        <h1>Real em Dolar</h1>
-        <p><span id="Valor-Dolar"></span></p>
+        <div class="texto">
+          <h1>Real em Dolar</h1>
+        </div>
+        <div class="resultado">
+          <p id="Valor-Dolar"></p>
+        </div>
       </div>
     </div>
   </body>
+  <footer>
+    Feito por
+    <a href="https://github.com/Arawns1/">Gabriel Damico</a>
+    durante a Imersão Dev da Alura
+  </footer>
 </html>
