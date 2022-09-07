@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="src.js"></script>
+    <title>Conversor de Moedas</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Conversor de moedas</legend>
+      <h1>Digite um valor</h1>
+      <input type="number" id="valor" />
+      <button type="submit" onclick="Converter()">Converter!</button>
+    </fieldset>
+    <div class="container">
+      <div class="card">
+        <h1>Dolar em Real</h1>
+        <p><span id="Valor-Real"></span></p>
+      </div>
+
+      <div class="card">
+        <h1>Real em Dolar</h1>
+        <p><span id="Valor-Dolar"></span></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -17,8 +17,12 @@ function CalcularMedia() {
     document.getElementById('media-msg').innerHTML = 'Você está arrasando!'
     document.getElementById('media-resultado').style.color = 'var(--verdeclaro)'
   } else {
+    var resto = (6 - media).toFixed(2)
     document.getElementById('media-msg').innerHTML =
-      'Você ficou abaixo da média :(  Vamos estudar!'
+      'Você ficou abaixo da média por ' +
+      resto +
+      ' ponto(s) <br> :(  Vamos estudar!'
+
     document.getElementById('media-resultado').style.color = 'red'
   }
   document.getElementById('card-resultado').style.opacity = 1
