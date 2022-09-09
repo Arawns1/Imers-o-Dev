@@ -182,13 +182,14 @@ button:hover{
 }
 
 .acertou{
-
-  
-position: relative;
-top: 0px;
+  position: relative;
+  width: 0em;
+  height: 0em;
+  transform: translate(0%, 0%);
+  transition: 0.6s;
+  left: 0vw;
+  top: 	0vh;
 margin: auto;
-width: 0em;
-height: 0em;
 opacity: 0;
 transition: 1s;
 scale: 100%;
@@ -215,13 +216,20 @@ z-index: 10;
 .vidas{
   display: flex;
   margin: auto;
-  width: 20em;
-  padding-top: 0.6em;
+  width: 13em;
+  margin-top: 30px;
+  height: 4em;
   justify-content: space-around;
+  border: 2px solid var(--cinza);
+  border-radius: 15px;
+  background-color: var(--cinza);
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.171);
 }
 
 #vidas-titulo{
   padding-top: 1em;
+  transform: translate(0, 5px);
+  color: white;
 }
 #vida1{
   scale: 100%;
