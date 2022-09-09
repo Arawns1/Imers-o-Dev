@@ -9,16 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
+
     <script src="src.js"></script>
   </head>
   <body>
 
+    <main id="telaPrincipal">
       <div class="centralizar">
         <div class="container card">
           <h1>O valor sorteado é</h1>
           <p id="numero-resultado" class="blur">0</p>
+          <div class="vida">
+            <h3 id="vidas-titulo"> Vidas</h3>
+            
+            <div class="vidas">
+                
+                <img src="images/vida.png" id="vida1" alt="" width="60px">
+                <img src="images/vida.png" id="vida2"alt="" width="60px">
+                <img src="images/vida.png" id="vida3" alt="" width="60px">
+  
+            </div>
+          </div>
         </div>
       </div>
+
+      
 
       <div class="centralizar">
         <div class="container-input card">
@@ -39,5 +54,19 @@
         </div>
       </div>
     </div>
+    </main>
+
+    
+      <div class="acertou">
+        <img id="img-resposta" src="images/output-onlinegiftools.gif" alt="" width=100">
+        <h1 id="titulo-resposta"></h1>
+        <p id="texto-resposta"></p>
+        <button type="submit" class="play-again"> Jogar novamente</button>
+      </div>
+    
+    
+
+
+
   </body>
 </html>
