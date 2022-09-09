@@ -33,7 +33,7 @@ function acertou() {
   main.classList.add('blur')
   correto.style.opacity = 1
   correto.style.top = '-450px'
-  correto.style.width = '15em'
+  correto.style.width = '19em'
   correto.style.height = '22em'
   btn.style.width = '8em'
   btn.style.height = '3em'
@@ -83,7 +83,7 @@ function errou() {
   var btn = document.querySelector('.play-again')
   img.src = 'images/errou.gif'
   correto.style.top = '-450px'
-  correto.style.width = '15em'
+  correto.style.width = '19em'
   correto.style.height = '22em'
   titulo.innerText = 'Você perdeu :('
   texto.innerHTML = 'O número sorteado foi ' + numeroSorteado
