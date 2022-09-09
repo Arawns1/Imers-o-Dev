@@ -55,9 +55,7 @@ function acertou() {
   texto.innerHTML = 'O número sorteado foi ' + numeroSorteado
   main.classList.add('blur')
   correto.style.opacity = 1
-  correto.style.top = '-50vh'
-  correto.style.left = '12.5vw'
-  correto.style.transform = 'translate(-50%, -50%)'
+  correto.style.top = '-540px'
   correto.style.width = '23em'
   correto.style.height = '24em'
 }
@@ -114,11 +112,9 @@ function errou() {
   const img = document.querySelector('#img-resposta')
 
   img.src = 'images/errou.gif'
-  correto.style.top = '-50vh'
-  correto.style.left = '12.5vw'
-  correto.style.transform = 'translate(-50%, -50%)'
+  correto.style.top = '-540px'
   correto.style.width = '23em'
-  correto.style.height = '22em'
+  correto.style.height = '24em'
 
   titulo.innerText = 'Você perdeu :('
   texto.innerHTML = 'O número sorteado foi ' + numeroSorteado
