@@ -15,54 +15,57 @@
   <body>
 
     <main id="telaPrincipal">
-      <div class="centralizar">
-        <div class="container card">
-          <h1>O valor sorteado é</h1>
-          <p id="numero-resultado" class="blur">0</p>
-          <div class="vida">
-            <h3 id="vidas-titulo"> Vidas</h3>
-            
-            <div class="vidas">
-                
-                <img src="images/vida.png" id="vida1" alt="" width="60px">
-                <img src="images/vida.png" id="vida2"alt="" width="60px">
-                <img src="images/vida.png" id="vida3" alt="" width="60px">
-  
+
+      <div class="teste1">
+        </div>
+        <div class="centralizar">
+          <div class="container card">
+            <h1>O valor sorteado é</h1>
+            <p id="numero-resultado" class="blur">0</p>
+            <div class="vida">
+              <h3 id="vidas-titulo"> Vidas</h3>
+              
+              <div class="vidas">
+                  
+                  <img src="images/vida.png" id="vida1" alt="" width="60px">
+                  <img src="images/vida.png" id="vida2"alt="" width="60px">
+                  <img src="images/vida.png" id="vida3" alt="" width="60px">
+    
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      
-
-      <div class="centralizar">
-        <div class="container-input card">
-          <h1>Tente acertar</h1>
-          <div class="texto-input">
-            <p>Digite um valor entre 0 e 10</p>
-            <input
-              type="number"
-              name="valor"
-              id="valorInput"
-              min="0"
-              max="10"
+  
+        <div class="centralizar">
+          <div class="container-input card">
+            <h1>Tente acertar</h1>
+            <div class="texto-input">
+              <p>Digite um valor entre 0 e 10</p>
+              <input
+                type="number"
+                name="valor"
+                id="valorInput"
+                min="0"
+                max="10"
+                
+              />
               
-            />
-            
+            </div>
+            <button type="submit" onclick="chutar()"> Chute! </button>
           </div>
-          <button type="submit" onclick="chutar()"> Chute! </button>
         </div>
       </div>
-    </div>
+    
     </main>
 
-    
+
       <div class="acertou">
         <img id="img-resposta" src="images/output-onlinegiftools.gif" alt="" width=100">
         <h1 id="titulo-resposta"></h1>
         <p id="texto-resposta"></p>
         <button type="submit" class="play-again"> Jogar novamente</button>
       </div>
+  
     
     
 
