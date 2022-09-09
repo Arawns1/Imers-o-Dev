@@ -36,11 +36,11 @@ body{
 .menu{
   position: relative;
   width: 23em;
-  height: 22em;
+  height: 24em;
   transform: translate(-50%, -50%);
   transition: 0.6s;
-  left: 50vw;
-  top: 	-50vh;
+  left: 49vw;
+  top: 	-52.5vh;
   background-color: rgb(224, 224, 224);
   border-radius: 10px;
   text-align: center;

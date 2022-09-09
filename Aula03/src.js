@@ -13,6 +13,7 @@ function chutar() {
       errou()
     }
   }
+  document.getElementById('valorInput').value = ' '
 }
 
 function jogar() {
@@ -58,6 +59,10 @@ function acertou() {
   correto.style.top = '-540px'
   correto.style.width = '23em'
   correto.style.height = '24em'
+  var btn = document.querySelector('.play-again')
+  btn.addEventListener('click', function () {
+    location.reload()
+  })
 }
 
 function perdeVida(num) {
@@ -120,11 +125,7 @@ function errou() {
   texto.innerHTML = 'O número sorteado foi ' + numeroSorteado
   main.classList.add('blur')
   correto.style.opacity = 1
-}
-
-function jogarNovamente() {
   var btn = document.querySelector('.play-again')
-  reaload = 1
   btn.addEventListener('click', function () {
     location.reload()
   })
