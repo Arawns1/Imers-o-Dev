@@ -31,6 +31,60 @@ body{
 }
 
 
+
+
+.menu{
+  position: relative;
+  width: 23em;
+  height: 22em;
+  transform: translate(-50%, -50%);
+  transition: 0.6s;
+  left: 50vw;
+  top: 	-50vh;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.171);
+}
+.menu > .conteudo{
+  padding-top: 2.8em;
+}
+.menu > .conteudo > button{
+  
+  width: 6em;
+  height: 3em;
+  margin: 20px;
+  margin-top: 36px;
+}
+
+.creditos{
+  
+  padding-top: 2em;
+}
+.creditos > p{
+  font-weight: 400;
+  padding: 12px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  
+}
+a:visited{
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+}
+#txtcomoJogar{
+  text-align: justify;
+  font-weight: 400;
+  padding: 0px 20px 0px 20px;
+  
+}
+
 .centralizar{
   display: flex;
   justify-content: center;
@@ -108,7 +162,7 @@ button:hover{
 }
 
 .blur{
-  filter: blur(5px);
+  filter: blur(4px);
   
 }
 
@@ -140,10 +194,6 @@ z-index: 10;
   margin-top: 25px;
 }
 
-main{
-  filter: blur(0px);
-  
-}
 
 .vidas{
   display: flex;
@@ -151,8 +201,6 @@ main{
   width: 20em;
   padding-top: 0.6em;
   justify-content: space-around;
-  
- 
 }
 
 #vidas-titulo{
@@ -162,7 +210,6 @@ main{
   scale: 100%;
   filter: grayscale(100%);
   opacity: 0.5;
-  
   transition: 1s;
   
 }
@@ -177,11 +224,10 @@ main{
   opacity: 0.5;
 }
 
-#play-again{
+.play-again{
   margin: 20px;
-  z-index: 10;
-  width: 0px;
-  height: 0px;
-  font-size: 0px;
-  margin: 0px;
+  width: 10em;
+  height: 3em;
+ 
 }
+

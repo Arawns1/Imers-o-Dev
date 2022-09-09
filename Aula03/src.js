@@ -1,24 +1,51 @@
 var numeroSorteado = parseInt(Math.random() * 11)
+
 var vida = 3
 
 function chutar() {
-  const valor = document.getElementById('valorInput').value
-  var valorTela = document.getElementById('numero-resultado')
-
-  valorTela.innerHTML = numeroSorteado
-
+  var valor = document.getElementById('valorInput').value
+  console.log('O numero sorteado:' + numeroSorteado)
+  console.log('Vida:' + vida)
+  console.log('Valor digitiadO: ' + valor)
   if (numeroSorteado == valor) {
     acertou()
   } else {
     vida--
-    console.log(vida)
     perdeVida(vida)
     if (vida == 0) {
       errou()
     }
   }
+}
 
-  console.log(numeroSorteado)
+function jogar() {
+  var valorTela = document.getElementById('numero-resultado')
+
+  valorTela.innerHTML = numeroSorteado
+  const menu = document.querySelector('.menu')
+  const conteudo = document.querySelector('.conteudo')
+  const main1 = document.querySelector('main')
+  main1.classList.remove('blur')
+  menu.style.visibility = 'hidden'
+  conteudo.style.visibility = 'hidden'
+}
+
+var clicked = 0
+function comoJogar() {
+  clicked++
+  if (clicked == 1) {
+    const menu1 = document.querySelector('.menu')
+    menu1.style.height = '29em'
+    const howtoplay = document.getElementById('txtcomoJogar')
+    howtoplay.innerHTML =
+      'O computador irá gerar um valor entre 0 e 10 aleatóriamente. Cabe a você a descobrir qual é esse valor. Você possui apenas 3 chances. <b>Boa sorte! </b>'
+  } else {
+    const menu1 = document.querySelector('.menu')
+    menu1.style.height = '22em'
+    const howtoplay = document.getElementById('txtcomoJogar')
+    howtoplay.innerHTML = ''
+    clicked = 0
+  }
 }
 
 function acertou() {
@@ -26,7 +53,6 @@ function acertou() {
   const main = document.querySelector('main')
   const titulo = document.querySelector('#titulo-resposta')
   const texto = document.querySelector('#texto-resposta')
-  var btn = document.querySelector('.play-again')
 
   titulo.innerText = 'Parabéns você acertou!'
   texto.innerHTML = 'O número sorteado foi ' + numeroSorteado
@@ -34,16 +60,10 @@ function acertou() {
   correto.style.opacity = 1
   correto.style.top = '-450px'
   correto.style.width = '23em'
-  correto.style.height = '22em'
-  btn.style.width = '10em'
-  btn.style.height = '3em'
-  btn.addEventListener('click', function () {
-    location.reload()
-  })
+  correto.style.height = '23em'
 }
 
 function perdeVida(num) {
-  console.log('num:' + num)
   switch (num) {
     case 2:
       const vida1 = document.querySelector('#vida1')
@@ -52,6 +72,12 @@ function perdeVida(num) {
       vida1.style.filter = 'grayscale(0%)'
       vida1.style.opacity = '0.8'
       vida1.style.filter = 'saturate(60%)'
+      const textoDica = document.getElementById('dica')
+      if (numeroSorteado > 5) {
+        textoDica.innerHTML = '<b>Dica:</b> o número é maior que 5'
+      } else {
+        textoDica.innerHTML = '<b>Dica:</b> o número é menor que 5'
+      }
       break
     case 1:
       const vida2 = document.querySelector('#vida2')
@@ -60,6 +86,12 @@ function perdeVida(num) {
       vida2.style.filter = 'grayscale(0%)'
       vida2.style.opacity = '0.8'
       vida2.style.filter = 'saturate(60%)'
+      const textoDica1 = document.getElementById('dica')
+      if (numeroSorteado % 2 == 0) {
+        textoDica1.innerHTML = '<b>Dica:</b> o número é par '
+      } else {
+        textoDica1.innerHTML = '<b>Dica:</b> o número é ímpar'
+      }
       break
     case 0:
       const vida3 = document.querySelector('#vida3')
@@ -69,6 +101,7 @@ function perdeVida(num) {
       vida3.style.opacity = '0.8'
       vida3.style.filter = 'saturate(60%)'
       break
+
     default:
       alert('erro')
   }
@@ -80,7 +113,7 @@ function errou() {
   const titulo = document.querySelector('#titulo-resposta')
   const texto = document.querySelector('#texto-resposta')
   const img = document.querySelector('#img-resposta')
-  var btn = document.querySelector('.play-again')
+
   img.src = 'images/errou.gif'
   correto.style.top = '-450px'
   correto.style.width = '23em'
@@ -89,9 +122,11 @@ function errou() {
   texto.innerHTML = 'O número sorteado foi ' + numeroSorteado
   main.classList.add('blur')
   correto.style.opacity = 1
+}
 
-  btn.style.width = '10em'
-  btn.style.height = '3em'
+function jogarNovamente() {
+  var btn = document.querySelector('.play-again')
+  reaload = 1
   btn.addEventListener('click', function () {
     location.reload()
   })

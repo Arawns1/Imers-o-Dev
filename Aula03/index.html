@@ -6,70 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo Números</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="src.js"></script>
   </head>
   <body>
-
-    <main id="telaPrincipal">
-
-      <div class="teste1">
-        </div>
+    <main id="telaPrincipal" class="blur">
+      <div id="card1">
         <div class="centralizar">
           <div class="container card">
             <h1>O valor sorteado é</h1>
             <p id="numero-resultado" class="blur">0</p>
             <div class="vida">
-              <h3 id="vidas-titulo"> Vidas6</h3>
-              
+              <h3 id="vidas-titulo">Vidas</h3>
+
               <div class="vidas">
-                  
-                  <img src="images/vida.png" id="vida1" alt="" width="60px">
-                  <img src="images/vida.png" id="vida2"alt="" width="60px">
-                  <img src="images/vida.png" id="vida3" alt="" width="60px">
-    
+                <img src="images/vida.png" id="vida1" alt="" width="60px" />
+                <img src="images/vida.png" id="vida2" alt="" width="60px" />
+                <img src="images/vida.png" id="vida3" alt="" width="60px" />
               </div>
             </div>
           </div>
         </div>
-  
+      </div>
+
+      <div id="card2">
         <div class="centralizar">
           <div class="container-input card">
             <h1>Tente acertar</h1>
             <div class="texto-input">
-              <p>Digite um valor entre 0 e 10</p>
+              <p id="dica">Digite um valor entre 0 e 10</p>
               <input
                 type="number"
                 name="valor"
                 id="valorInput"
                 min="0"
                 max="10"
-                
               />
-              
             </div>
-            <button id="btnChute" type="submit" onclick="chutar()"> Chute! </button>
+            <button id="btnChute" type="submit" onclick="chutar()">
+              Chute!
+            </button>
           </div>
         </div>
       </div>
-    
     </main>
 
+    <div class="acertou">
+      <img id="img-resposta" src="images/output-onlinegiftools.gif" alt=""
+      width=100">
+      <h1 id="titulo-resposta"></h1>
+      <p id="texto-resposta"></p>
+      <button type="submit" class="play-again" onclick="jogarNovamente()">
+        Jogar novamente
+      </button>
+    </div>
 
-      <div class="acertou">
-        <img id="img-resposta" src="images/output-onlinegiftools.gif" alt="" width=100">
-        <h1 id="titulo-resposta"></h1>
-        <p id="texto-resposta"></p>
-        <button type="submit" class="play-again"> Jogar novamente</button>
+    <div class="menu">
+      <div class="conteudo">
+        <h1>Mentalista</h1>
+        <button type="submit" onclick="jogar()">Jogar!</button>
+        <button type="submit" onclick="comoJogar()">Como jogar?</button>
+
+        <p id="txtcomoJogar">
+          
+        </p>
+
+        <div class="creditos">
+          <img
+            src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-mentalista.svg"
+            style="width: 200px; background-color: var(--cinzaclaro)"
+            alt=""
+          />
+          <p>
+            Criado por
+            <a href="https://github.com/Arawns1/" target="_blank"
+              >Gabriel Damico</a
+            >
+          </p>
+        </div>
       </div>
-  
-    
-    
-
-
-
+    </div>
   </body>
 </html>
