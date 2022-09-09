@@ -33,9 +33,9 @@ function acertou() {
   main.classList.add('blur')
   correto.style.opacity = 1
   correto.style.top = '-450px'
-  correto.style.width = '19em'
+  correto.style.width = '23em'
   correto.style.height = '22em'
-  btn.style.width = '8em'
+  btn.style.width = '10em'
   btn.style.height = '3em'
   btn.addEventListener('click', function () {
     location.reload()
@@ -83,14 +83,14 @@ function errou() {
   var btn = document.querySelector('.play-again')
   img.src = 'images/errou.gif'
   correto.style.top = '-450px'
-  correto.style.width = '19em'
+  correto.style.width = '23em'
   correto.style.height = '22em'
   titulo.innerText = 'Você perdeu :('
   texto.innerHTML = 'O número sorteado foi ' + numeroSorteado
   main.classList.add('blur')
   correto.style.opacity = 1
 
-  btn.style.width = '8em'
+  btn.style.width = '10em'
   btn.style.height = '3em'
   btn.addEventListener('click', function () {
     location.reload()
