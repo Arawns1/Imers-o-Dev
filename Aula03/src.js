@@ -35,7 +35,7 @@ function acertou() {
   correto.style.top = '-450px'
   correto.style.width = '15em'
   correto.style.height = '22em'
-  btn.style.width = '2em'
+  btn.style.width = '8em'
   btn.style.height = '3em'
   btn.addEventListener('click', function () {
     location.reload()
@@ -90,7 +90,7 @@ function errou() {
   main.classList.add('blur')
   correto.style.opacity = 1
 
-  btn.style.width = '2em'
+  btn.style.width = '8em'
   btn.style.height = '3em'
   btn.addEventListener('click', function () {
     location.reload()
