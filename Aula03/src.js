@@ -4,9 +4,6 @@ var vida = 3
 
 function chutar() {
   var valor = document.getElementById('valorInput').value
-  console.log('O numero sorteado:' + numeroSorteado)
-  console.log('Vida:' + vida)
-  console.log('Valor digitiadO: ' + valor)
   if (numeroSorteado == valor) {
     acertou()
   } else {
