@@ -13,8 +13,14 @@
   
 }
 
+
+html{
+  width: 98vw;
+}
+
 body{
   height: 100vh;
+  width: 95vw;
   background: rgb(3,7,13);
   background: linear-gradient(0deg, rgba(3,7,13,1) 0%, rgba(2,0,36,1) 50%, rgba(5,1,68,1) 100%);
   background-attachment: fixed;
@@ -84,8 +90,6 @@ input[type='number']::-webkit-outer-spin-button {
 
 button{
   margin-top: 20px;
-  height: 2em;
-  width: 12em;
   border-radius: 0.5em;
   cursor: pointer;
   font-family: 'Bebas Neue', cursive;
@@ -93,6 +97,10 @@ button{
   transition: 0.5s;
 }
 
+#btnChute{
+  height: 2em;
+  width: 12em;
+}
 button:hover{
   scale: 105%;
   transition: 0.5s;
@@ -126,10 +134,7 @@ z-index: 10;
   margin-top: 0.6em;
   
 }
-.acertou > button{
-  margin: 20px;
-  z-index: 10;
-}
+
 
 .acertou > img {
   margin-top: 25px;
@@ -172,3 +177,11 @@ main{
   opacity: 0.5;
 }
 
+#play-again{
+  margin: 20px;
+  z-index: 10;
+  width: 0px;
+  height: 0px;
+  font-size: 0px;
+  margin: 0px;
+}
