@@ -1,4 +1,30 @@
 
+var filmes = []
+
+function adicionarFilme(){
+  var input = document.getElementById("inputFilme").value;
+  var lista = document.getElementById("listafilme")
+  filmes.push(input)
+
+  console.log(filmes)
+
+  
+
+
+  
+    
+  
+
+}
+
+
+
+
+
+
+
+
+/*
 var i = 0;
 
 function adicionarFilme() {
@@ -21,3 +47,4 @@ function listarFilmesNaTela(input){
   elementoListaFilmes.innerHTML += elementoFilmeFavorito + id;
   document.getElementById("filme").value = ' ';
 }
+*/

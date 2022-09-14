@@ -1,12 +1,135 @@
+:root {
+  --vermelho: rgb(175, 3, 3);
+  --vermelhoHover: rgb(134, 0, 0);
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
-  font-family: "Roboto Mono", monospace;
   text-align: center;
-  background-image: url("https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png");
   background-color: #000000;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  color: white;
+  font-family: 'Gotham', sans-serif;
 }
+
+.page-logo {
+  width: 220px;
+  cursor: pointer;
+  margin-left: 3%;
+}
+
+nav {
+  display: flex;
+  justify-content: left;
+  align-items: right;
+  height: 8vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+
+
+a {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  transition: 0.5s;
+  font-weight: bold;
+  color: var(--vermelho);
+
+}
+
+.list {
+  margin: 3em 0em 3em 0em;
+}
+
+#film-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  margin: 10px;
+  height: 250px;
+  width: 250px;
+}
+
+#film-list img {
+  border-radius: 20px;
+  filter: grayscale(80%);
+  transition: 0.5s;
+}
+
+#film-list img:hover {
+  transition: 0.5s;
+  scale: 105%;
+  filter: grayscale(0%);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 26px -4px rgba(175, 3, 3, 0.6);
+  box-shadow: 0px 10px 26px -4px rgba(175, 3, 3, 0.6);
+}
+
+#no-film {
+  align-content: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: green;
+  height: 4em;
+}
+
+
+#inputFilme {
+  display: block;
+  margin: auto;
+  width: 14em;
+  height: 2em;
+  border-radius: 0.4em;
+  margin-bottom: 20px;
+}
+
+
+
+#btnAdd {
+  display: block;
+  margin: auto;
+  width: 14em;
+  height: 3em;
+  background-color: var(--vermelhoHover);
+  border-radius: 0.6em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  border-width: 0px;
+}
+
+#btnAdd:hover {
+  scale: 105%;
+  transition: 0.2s;
+  color: white;
+  background-color: var(--vermelho);
+  -webkit-box-shadow: 0px 10px 26px -4px rgba(175, 3, 3, 0.6);
+  box-shadow: 0px 10px 26px -4px rgba(175, 3, 3, 0.6);
+
+}
+
+/*
 
 .container {
   text-align: center;
@@ -70,4 +193,4 @@ body {
 
 .form-wrapper button:hover {
   opacity: 0.8;
-}
+}*/
