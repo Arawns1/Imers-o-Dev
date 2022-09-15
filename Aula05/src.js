@@ -1,30 +1,51 @@
 
 var filmes = []
-//var i = 0;
+
+var indiceFilmeSelecionado = 0;
+
 
 
 function menuFilme(index){
+  indiceFilmeSelecionado = index;
   var menu = document.querySelector(".menu");
   menu.innerHTML += '<img src="'+ filmes[index] +'">'
- // menu.innerHTML += '<p>Índice: ' + index +'</p>'
   menu.style.display = "flex"
+
 }
 
 function adicionarFilme(){
-  document.getElementById("film-list").innerHTML = ' '
-  var input = document.getElementById("inputFilme").value;
-  filmes.push(input)
   
-  for(var i in filmes){
-    document.getElementById("film-list").innerHTML += '<img onclick="menuFilme(' + i + ')" src="' + filmes[i] + '">'
-  }
+  var input = document.getElementById("inputFilme").value;
 
- // i++
+  if(input.endsWith('.jpg') ||input.endsWith('.png') ){
+    filmes.push(input)
+  }
+  else{
+    alert("Formato de imagem inválido!")
+  }
+  
+  
+atualizaLista();
 
   document.getElementById("inputFilme").value = '';
 }
 
+function atualizaLista(){
+  document.getElementById("film-list").innerHTML = ' '
+  for(var i in filmes){
+    document.getElementById("film-list").innerHTML += '<img onclick="menuFilme(' + i + ') " src="' + filmes[i] + '">'
+  }
+}
 
+function removerFilme(){
+  const index = indiceFilmeSelecionado
+if (index > -1) {
+  filmes.splice(index, 1);
+}
+atualizaLista()
+var menu = document.querySelector(".menu");
+menu.style.display = "none "
+}
 
 
 

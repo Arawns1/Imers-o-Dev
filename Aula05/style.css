@@ -13,6 +13,7 @@ body {
   background-repeat: no-repeat;
   color: white;
   font-family: 'Gotham', sans-serif;
+
 }
 
 .page-logo {
@@ -59,6 +60,7 @@ a:hover {
 
 .list {
   margin: 3em 0em 3em 0em;
+  padding: 0px 20px 0px 20px;
 }
 
 #film-list {
@@ -165,7 +167,7 @@ a:hover {
 
 .btnMenu {
   margin: auto;
-  width: 14em;
+  width: 18em;
   height: 4em;
   background-color: rgba(39, 5, 5, 0.247);
   border-radius: 0.6em;
