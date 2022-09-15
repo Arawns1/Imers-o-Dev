@@ -1,20 +1,27 @@
 
 var filmes = []
+//var i = 0;
+
+
+function menuFilme(index){
+  var menu = document.querySelector(".menu");
+  menu.innerHTML += '<img src="'+ filmes[index] +'">'
+ // menu.innerHTML += '<p>Índice: ' + index +'</p>'
+  menu.style.display = "flex"
+}
 
 function adicionarFilme(){
+  document.getElementById("film-list").innerHTML = ' '
   var input = document.getElementById("inputFilme").value;
-  var lista = document.getElementById("listafilme")
   filmes.push(input)
-
-  console.log(filmes)
-
   
+  for(var i in filmes){
+    document.getElementById("film-list").innerHTML += '<img onclick="menuFilme(' + i + ')" src="' + filmes[i] + '">'
+  }
 
+ // i++
 
-  
-    
-  
-
+  document.getElementById("inputFilme").value = '';
 }
 
 
