@@ -1,36 +1,10 @@
-/*
-Exemplo utilizando classes
-
-class pessoa {
-    constructor(nome, vitorias, empates, derrotas, pontos){
-      this.nome = nome;
-      this.vitorias = vitorias;
-      this.empates = empates;
-      this.derrotas = derrotas;
-      this.pontos = pontos;
-    }
-  
-    getInfo(){
-      return console.log("Nome: " + this.nome + "\nVitorias: " + this.vitorias + "\nEmpates: " + this.empates+ " \nDerrotas: " + this.derrotas + "\nPontos: " + this.pontos)
-    }
-   
-  }
-  
-  var Carlos = new pessoa("Carlos", 10, 10, 20, 30)
-  Carlos.getInfo()
-
-*/
-
-
-
-
 var Rafa = {
   nome: "Rafa",
   vitorias: 2,
   empates: 1,
   derrotas: 1,
-  pontos: 0,
-}
+  pontos: 0
+};
 
 var Paulo = {
   nome: "Paulo",
@@ -38,17 +12,14 @@ var Paulo = {
   empates: 1,
   derrotas: 2,
   pontos: 0
-
-}
+};
 
 function calculaPontos(jogador) {
-  var pontos = (jogador.vitorias * 3) + jogador.empates
-  return jogador.pontos = pontos
+  var pontos = jogador.vitorias * 3 + jogador.empates;
+  return (jogador.pontos = pontos);
 }
 
-
 var jogadores = [Rafa, Paulo];
-
 
 function exibeJogadoresNaTela(jogadores) {
   var elemento = "";
@@ -58,22 +29,41 @@ function exibeJogadoresNaTela(jogadores) {
     elemento += "<td>" + jogadores[i].empates + "</td>";
     elemento += "<td>" + jogadores[i].derrotas + "</td>";
     elemento += "<td>" + jogadores[i].pontos + "</td>";
-    elemento += "<td><button onClick='adicionarVitoria()'>Vitória</button></td>";
-    elemento += "<td><button onClick='adicionarEmpate()'>Empate</button></td>";
-    elemento += "<td><button onClick='adicionarDerrota()'>Derrota</button></td>";
+    elemento +=
+      "<td><button onClick='adicionarVitoria(" + i + ")'>Vitória</button></td>";
+    elemento +=
+      "<td><button onClick='adicionarEmpate(" + i + ")'>Empate</button></td>";
+    elemento +=
+      "<td><button onClick='adicionarDerrota(" + i + ")'>Derrota</button></td>";
     elemento += "</tr>";
-
   }
   var tabelaJogadores = document.getElementById("tabelaJogadores");
-  console.log(tabelaJogadores)
+  console.log(tabelaJogadores);
   tabelaJogadores.innerHTML = elemento;
 }
 
+function adicionarVitoria(i) {
+  var jogador = jogadores[i];
+  jogador.vitorias++;
+  calculaPontos(jogador);
+  exibeJogadoresNaTela(jogadores);
+}
 
+function adicionarDerrota(i) {
+  var jogador = jogadores[i];
+  jogador.derrotas++;
+  calculaPontos(jogador);
+  exibeJogadoresNaTela(jogadores);
+}
 
+function adicionarEmpate(i) {
+  var jogador = jogadores[i];
+  jogador.empates++;
+  calculaPontos(jogador);
+  exibeJogadoresNaTela(jogadores);
+}
 
-
-console.log(jogadores)
+console.log(jogadores);
 calculaPontos(Rafa);
 calculaPontos(Paulo);
 exibeJogadoresNaTela(jogadores);
