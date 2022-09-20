@@ -11,11 +11,11 @@
    Clique Aqui</a> <br>
  - **Ex004** - : <a href="https://arawns1.github.io/Imersao-Dev/Aula04/index.html">
    Clique Aqui</a> <br>
- - **Ex005** - : <a href="https://arawns1.github.io/Imersao-Dev/Aula05/index.html">
+ - **Ex005** - AluraFlix : <a href="https://arawns1.github.io/Imersao-Dev/Aula05/index.html">
    Clique Aqui</a> <br>
- - **Ex006** - : <a href="https://arawns1.github.io/Imersao-Dev/Aula06/index.html">
+ - **Ex006** - Tabela de Classificação : <a href="https://arawns1.github.io/Imersao-Dev/Aula06/index.html">
    Clique Aqui</a> <br>
- - **Ex007** - : <a href="https://arawns1.github.io/Imersao-Dev/Aula07/index.html">
+ - **Ex007** - SuperTrunfo : <a href="https://arawns1.github.io/Imersao-Dev/Aula07/index.html">
    Clique Aqui</a> <br>
- - **Ex008** - : <a href="https://arawns1.github.io/Imersao-Dev/Aula08/index.html">
+ - **Ex008** - SuperTrunfo - : <a href="https://arawns1.github.io/Imersao-Dev/Aula08/index.html">
    Clique Aqui</a> <br>
