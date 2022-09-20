@@ -35,12 +35,8 @@ var cartaJogador
 
 
 function sortearCarta() {
-
-  
-
   var numeroCartaMaquina = parseInt(Math.random() * 3)
   cartaMaquina = cartas[numeroCartaMaquina]
-
 
   var numeroCartaJogador = parseInt(Math.random() * 3)
 
@@ -61,8 +57,6 @@ function sortearCarta() {
   imagens.innerHTML += "<h2>Defesa:"+cartaJogador.atributos.defesa+"</h2>"
   imagens.innerHTML += "<h2>Magia:"+cartaJogador.atributos.magia+"</h2>"
 
-  console.log(cartaMaquina)
-  console.log(cartaJogador)
   exibirOpcoes()
 }
 
