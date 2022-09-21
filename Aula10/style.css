@@ -19,9 +19,14 @@ body {
   padding: 64px;
 }
 
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
 .perfil {
   display: flex;
-  align-items: center;
+
 }
 
 .perfil-foto {
@@ -44,14 +49,60 @@ body {
   font-size: 24px;
 }
 
+.tema button {
+  align-self: flex-end;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 8px 16px;
+  background-color: #ECF4FF;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
 .projetos {
   display: flex;
   flex-direction: column;
-
-}
-
-.main-container {
   background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
   box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
   border-radius: 20px;
+  margin-top: 32px;
+  padding: 32px;
+}
+
+.projetos-titulo {
+  list-style: none;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.projetos-itens {
+  list-style-type: none;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.projetos-itens a {
+  color: #1c1c1c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: linear-gradient(286.85deg, #375b86 27.26%, #6b87a9 96.03%);
+}
+
+.dark .container {
+  background: #333439;
+  color: #F6F6F6;
+}
+
+.dark .projetos {
+  color: #1c1c1c;
+}
+
+.dark .tema button {
+  background-color: #1c1c1c;
+  color: #F6F6F6;
+  border: 2px solid #F7F7F7;
 }
